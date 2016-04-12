@@ -2,12 +2,55 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<style>
+	#outer {
+		width: 200px;
+		height: 100px;
+		background: #f00;
+	}
+	#inner{
+		margin: 0 auto;
+		width: 100px;
+		height: 50px;
+		background: #0f0;
+	}
+	</style>
 	<title>JQ OOP EX1</title>
 	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
 </head>
 <body>
 	<p id="sometext">哈哈哈</p>
 
+	<div id="outer">
+		外
+		<p id="inner">
+			内
+		</p>
+	</div>
+
 <script src="myPlugin.js"></script>
+
+<script>
+	$('#sometext').myPlugin({'color':'red','fontSize':'36px'});
+</script>
+
+<script>
+	// ;(function(){
+	// 	function gId(id){
+	// 		return document.getElementById(id);
+	// 	}
+
+	// 	gId('inner').addEventListener('click', function(event){
+	// 		alert(event.target.tagName + '\n' + event.currentTarget.tagName);
+	// 	});
+
+	// 	gId('outer').addEventListener('click', function(event){
+	// 		alert(event.target.tagName + '\n' + event.currentTarget.tagName);
+	// 	});
+		
+	// })();
+
+</script>
 </body>
 </html>
